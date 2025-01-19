@@ -93,14 +93,18 @@ input {
   background: transparent;
 }
 
+input::placeholder {
+  opacity: 1;
+  width: 180px;
+  transition: all 0.25s;
+}
+
 label { 
-  visibility: hidden;
   position: absolute;
   opacity: 0;
   width: 180px;
   transform: translateY(20px);
-  transition: opacity 0.3s;
-  transition: transform 0.3s;
+  transition: all 0.25s;
   z-index: -1;
 }
 
@@ -108,12 +112,13 @@ input:focus {
   outline: none;
 }
 
-input:focus + label {
-  visibility: visible;
+input:focus + label, 
+input:not(:placeholder-shown) + label {
   opacity: 1;
   transform: translate(-0.9rem, -0.2rem) scale(0.8);
 }
 
 input:focus::placeholder {
   opacity: 0;
+  transform: translate(-0.9rem, -1.2rem) scale(0.8);
 }
