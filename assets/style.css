@@ -72,3 +72,48 @@ h6 {
 
 :root {
 }
+
+#sign-up-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 15px;
+  column-gap: 10px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid black;
+}
+
+input {
+  border: none;
+  padding-top: 20px;
+  background: transparent;
+}
+
+label { 
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  width: 180px;
+  transform: translateY(20px);
+  transition: opacity 0.3s;
+  transition: transform 0.3s;
+  z-index: -1;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:focus + label {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-0.9rem, -0.2rem) scale(0.8);
+}
+
+input:focus::placeholder {
+  opacity: 0;
+}

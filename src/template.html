@@ -9,40 +9,40 @@
     <div>
       <form id="sign-up-form">
         <div class="input-wrapper">
+          <input required type="text" name="first-name" id="first-name" placeholder="First name*">
           <label for="first-name">
             First name:
           </label>
-          <input type="text" name="first-name" id="first-name" placeholder="First name*">
         </div>
         <div class="input-wrapper">
+          <input type="text" name="last-name" id="last-name" placeholder="Last name">
           <label for="last-name">
             Last name:
           </label>
-          <input type="text" name="last-name" id="last-name" placeholder="Last name">
         </div>
         <div class="input-wrapper">
+          <input required type="email" name="email" id="email" placeholder="Email*">
           <label for="email">
             Email:
           </label>
-          <input required type="email" name="email" id="email" placeholder="Email*">
         </div>
         <div class="input-wrapper">
+          <input type="text" pattern="\d+" name="phone" id="phone" placeholder="Phone number">
           <label for="phone">
             Phone number:
           </label>
-          <input type="text" pattern="\d+" name="phone" id="phone" placeholder="Phone number">
         </div>
         <div class="input-wrapper">
+          <input type="password" required name="password" id="password" placeholder="Password*">
           <label for="password">
             Password:
           </label>
-          <input type="password" pattern="\d+" name="password" id="password" placeholder="Password*">
         </div>
         <div class="input-wrapper">
+          <input type="password" required  name="password-confirm" id="password-confirm" placeholder="Confirm password*">
           <label for="password-confirm">
             Confirm password:
           </label>
-          <input type="password" pattern="\d+" name="password-confirm" id="password-confirm" placeholder="Confirm password*">
         </div>
       </form>
       <button type="submit" form="sign-up-form">Create Account</button>
